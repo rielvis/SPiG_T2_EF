@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://d2capvsj7gj3y"]
 
 [ext_resource type="Script" uid="uid://oo2j56nixl5u" path="res://scripts/coin.gd" id="1_i64fm"]
-[ext_resource type="Texture2D" uid="uid://bonn1o5g2a01m" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="1_rwqht"]
+[ext_resource type="Texture2D" uid="uid://bw07vqu7htnxl" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="1_rwqht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i64fm"]
 atlas = ExtResource("1_rwqht")
