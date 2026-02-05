@@ -50,7 +50,7 @@ script = ExtResource("1_n6pvg")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_md484")
 autoplay = "default"
-frame_progress = 0.329736
+frame_progress = 0.866803
 
 [node name="Killzone" parent="." instance=ExtResource("2_n6pvg")]
 
@@ -60,8 +60,8 @@ shape = SubResource("RectangleShape2D_ipns3")
 
 [node name="RayCast2D_R" type="RayCast2D" parent="."]
 position = Vector2(0, -6)
-target_position = Vector2(9, 0)
+target_position = Vector2(8, 0)
 
 [node name="RayCast2D_L" type="RayCast2D" parent="."]
 position = Vector2(0, -6)
-target_position = Vector2(-9, 0)
+target_position = Vector2(-8, 0)

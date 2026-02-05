@@ -218,9 +218,6 @@ _data = {
 [node name="Slime" parent="Enemies" instance=ExtResource("4_p57ef")]
 position = Vector2(600, 16)
 
-[node name="Slime2" parent="Enemies" instance=ExtResource("4_p57ef")]
-position = Vector2(728, -16)
-
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 5
 position = Vector2(0, -2)
@@ -276,6 +273,9 @@ position = Vector2(-87, 7)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(544, -24)
+
+[node name="Slime" parent="Coins" instance=ExtResource("4_p57ef")]
+position = Vector2(-120, 16)
 
 [node name="Platforms" type="Node" parent="."]
 
