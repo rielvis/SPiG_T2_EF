@@ -50,7 +50,7 @@ script = ExtResource("1_n6pvg")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_md484")
 autoplay = "default"
-frame_progress = 0.40846
+frame_progress = 0.578793
 
 [node name="Killzone" parent="." instance=ExtResource("2_n6pvg")]
 
