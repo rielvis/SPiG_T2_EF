@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dglqvdmm5l7up"]
+[gd_scene load_steps=13 format=3 uid="uid://dglqvdmm5l7up"]
 
 [ext_resource type="PackedScene" uid="uid://cu1u05qmjde67" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://c0akr6whe2ihp" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bjphi0s3htp04" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://d2capvsj7gj3y" path="res://scenes/coin.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dots0el7utgqx" path="res://scenes/slime.tscn" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dhyetds8352pc" path="res://scenes/killzone.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
@@ -212,6 +213,14 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Slime" parent="Enemies" instance=ExtResource("4_p57ef")]
+position = Vector2(600, 16)
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("4_p57ef")]
+position = Vector2(728, -16)
+
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 5
 position = Vector2(0, -2)
@@ -250,12 +259,6 @@ position = Vector2(135, -71)
 [node name="Coin4" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(312, -26)
 
-[node name="Coin6" parent="Coins" instance=ExtResource("4_lbhrr")]
-position = Vector2(576, 5)
-
-[node name="Coin7" parent="Coins" instance=ExtResource("4_lbhrr")]
-position = Vector2(688, 5)
-
 [node name="Coin8" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(827, -89)
 
@@ -270,6 +273,9 @@ position = Vector2(688, -172)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(-87, 7)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(544, -24)
 
 [node name="Platforms" type="Node" parent="."]
 
