@@ -28,10 +28,13 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = true
 		
 	# Play animations
-	if direction == 0:
-		animated_sprite_2d.play("idle")
+	if is_on_floor():
+		if direction == 0:
+			animated_sprite_2d.play("idle")
+		else:
+			animated_sprite_2d.play("run")
 	else:
-		animated_sprite_2d.play("run")
+		animated_sprite_2d.play("jump")
 	
 	# Applies movement
 	if direction:
