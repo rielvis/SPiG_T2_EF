@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d2capvsj7gj3y"]
+[gd_scene load_steps=17 format=3 uid="uid://d2capvsj7gj3y"]
 
 [ext_resource type="Script" uid="uid://oo2j56nixl5u" path="res://scripts/coin.gd" id="1_i64fm"]
 [ext_resource type="Texture2D" uid="uid://bw07vqu7htnxl" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="1_rwqht"]
@@ -98,77 +98,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ssuvv"]
 radius = 5.0
 
-[sub_resource type="Animation" id="Animation_11l1o"]
-resource_name = "pickup"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_d14el"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ikuy"]
-_data = {
-&"RESET": SubResource("Animation_d14el"),
-&"pickup": SubResource("Animation_11l1o")
-}
-
 [node name="Coin" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_i64fm")
@@ -181,11 +110,5 @@ frame_progress = 0.233335
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ssuvv")
-disabled = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_1ikuy")
-}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
